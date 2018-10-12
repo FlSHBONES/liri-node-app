@@ -1,12 +1,12 @@
 {
   "name": "liri-node-app",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Language Interpretation and Recognition Interface",
-  "main": "index.js",
+  "main": "keys.js",
   "dependencies": {
     "dotenv": "^6.1.0",
-    "node-spotify-api": "^1.0.7",
     "moment": "^2.22.2",
+    "node-spotify-api": "^1.0.7",
     "request": "^2.88.0"
   },
   "devDependencies": {},
@@ -17,12 +17,8 @@
     "type": "git",
     "url": "git+https://github.com/FlSHBONES/liri-node-app.git"
   },
-  "keywords": [
-    "LIRI",
-    "language",
-    "interpretation"
-  ],
-  "author": "FlSHBONES",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FlSHBONES/liri-node-app/issues"
