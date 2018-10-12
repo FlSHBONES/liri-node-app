@@ -1,8 +1,8 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "Language Interpretation and Recognition Interface",
-  "main": "keys.js",
+  "description": "LIRI",
+  "main": "apis.js",
   "dependencies": {
     "dotenv": "^6.1.0",
     "moment": "^2.22.2",
@@ -17,8 +17,16 @@
     "type": "git",
     "url": "git+https://github.com/FlSHBONES/liri-node-app.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "LIRI",
+    "band",
+    "song",
+    "movie",
+    "language",
+    "interpreter",
+    "better-than-SIRI"
+  ],
+  "author": "flshbone",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FlSHBONES/liri-node-app/issues"
