@@ -59,13 +59,13 @@ var Spotifyme = function () {
             var musicData = [
                 "\nSong: " + artistname,
                 "Album: " + jsonData.tracks.items[0].album.name,
-                "Artist: " + jsonData.tracks.items[0].album.artists,
+                "Artist: " + jsonData.tracks.items[0].album.artists[0].name,
                 "Preview: " + jsonData.tracks.items[0].preview_url
             ].join("\n\n");
 
             fs.appendFile("log.txt", musicData + divider, function (err) {
                 if (err) throw err;
-                console.log(musicData); //TODO need to put in musicData
+                console.log(musicData);
             });
         });
     };
