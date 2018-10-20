@@ -1,11 +1,12 @@
 var Bandintown = require("./apis");
-var Spotifyme = require("./apis")
-var Movieme = require("./apis")
+var Movieme = require("./apis");
+var Spotifyme = require("./apis");
 
 // Create a new object
-var spotifyme = new Spotifyme();
+
 var bandintown = new Bandintown();
 var movieme = new Movieme();
+var spotifyme = new Spotifyme();
 
 // Grab search command line argument
 var search = process.argv[2];

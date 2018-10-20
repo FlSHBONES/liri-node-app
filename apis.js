@@ -15,14 +15,14 @@ var Bandintown = function () {
 
   this.findBand = function (band) {
     request("https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp", function (error, response, body) {
-    
+
       var jsonData = JSON.parse(body);
 
       var bandData = [
         "Venue: " + jsonData.venue.name,
         "Date: " + jsonData.datetime, // TODO moment().format();
-        "Loaction: " + jsonData.venue.city + ", " + jsonData.venue.region,+ ", " + jsonData.venue.country
-    
+        "Loaction: " + jsonData.venue.city + ", " + jsonData.venue.region, + ", " + jsonData.venue.country
+
       ].join("\n\n");
 
       fs.appendFile("log.txt", bandData + divider, function (err) {
@@ -31,28 +31,28 @@ var Bandintown = function () {
       });
     });
   };
-  
+
 };
 
 // Create the Spotify Constuctor
 var Spotifyme = function () {
   var divider =
     "\n------------------------------------------------------------\n\n";
- 
+
   this.findMusic = function (song) {
-    
+
     spotify.search({ type: 'track', query: song }, function (err, data) {
       if (err) {
-           console.log('Error: ' + err);
-           return;
+        console.log('Error: ' + err);
+        return;
       }
       var dataArray = data.tracks.items[0].album.artists;
-        var datapushname = [];
+      var datapushname = [];
 
-        for (var i = 0; i < dataArray.length; i++) {
-            datapushname.push(dataArray[i].name);
-        }
-        var artistname = datapushname.join(", ");
+      for (var i = 0; i < dataArray.length; i++) {
+        datapushname.push(dataArray[i].name);
+      }
+      var artistname = datapushname.join(", ");
       var jsonData = data;
 
       var musicData = [
@@ -93,7 +93,7 @@ var Movieme = function () {
 
       fs.appendFile("log.txt", movieData + divider, function (err) {
         if (err) throw err;
-        console.log(movieData); 
+        console.log(movieData);
       });
     });
   };

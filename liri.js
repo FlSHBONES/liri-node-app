@@ -121,28 +121,34 @@ if (!search) {
 
 
 // Find what
-if (search === "spotify-this-song") {
+
+ if (search === "spotify-this-song" && !term) {
+    console.log("\n\nSearching for a song\n");
+    spotifyme.findMusic("The Sign");
+}
+
+else if (search === "spotify-this-song") {
     console.log("\n\nSearching for a song\n");
     spotifyme.findMusic(term);
 }
-else if (search === "spotify-this-song" && !term) {
-    console.log("\n\nSearching for a song\n");
-    spotifyme.findMusic("The Sign");
+
+else if (search === "movie-this" && !term) {
+    movieme.findMovie("Mr. Nobody");
+    console.log("\n\nSearching for a movie\n");
 }
 else if (search === "movie-this") {
     movieme.findMovie(term);
     console.log("\n\nSearching for a movie\n");
 }
-else if (search === "movie-this" && !term) {
-    movieme.findMovie("Mr. Nobody");
-    console.log("\n\nSearching for a movie\n");
-}
-else if (search === "concert-this") {
-    bandintown.findBand(term);
-    console.log("\n\nSearching for a band\n");
-}
+
+
 else if (search === "concert-this" && !term) {
     bandintown.findBand("Coheed and Cambria");
+    console.log("\n\nSearching for a band\n");
+}
+
+else if (search === "concert-this") {
+    bandintown.findBand(term);
     console.log("\n\nSearching for a band\n");
 }
 
